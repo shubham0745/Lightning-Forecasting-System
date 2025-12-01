@@ -577,7 +577,7 @@ def render_overview():
     with c1:
         if st.button("Go to Prediction Page ⚡"):
             st.session_state.page = "Prediction"
-            st.experimental_rerun()
+            st.rerun()
     with c2:
         st.caption("Use today’s or forecasted weather to estimate lightning risk at district level.")
 
@@ -657,7 +657,7 @@ def render_prediction():
             else:
                 st.session_state.weather_data = weather
                 st.success("Weather data fetched and pre-filled in the input fields below.")
-                st.experimental_rerun()
+                st.rerun()
 
     with colW2:
         if st.session_state.weather_data:
