@@ -37,39 +37,24 @@ The final system provides real-time lightning risk, with a clean Streamlit UI fo
 ✔ Machine Learning Ensemble Model
 
 The final prediction is based on the average probability from:
-
 Logistic Regression
-
 Multi-Layer Perceptron (MLP)
-
 Gradient Boosting
 
 ✔ Key Weather Inputs
-
 Temperature
-
 Relative Humidity
-
 Rainfall
-
 Wind Speed
-
 Surface Pressure
-
 3-day rolling features
-
 Pressure drop
-
 District spatial encoding
 
 ✔ Clean and Modern Streamlit Interface
-
 District-wise weather inputs
-
 Real-time OpenWeather API fetch
-
 Lightning probability with risk category
-
 Detailed engineered feature vector
 
 🔧 Tech Stack
@@ -81,76 +66,49 @@ Data Processing	Pandas, NumPy
 Feature Engineering	Weather-based engineered attributes
 API	OpenWeatherMap
 Deployment	Streamlit Cloud
+
 🧠 Machine Learning Approach
+
 1. Data Preprocessing
-
 Missing-value handling
-
 Duplicate removal
-
 Unnamed column cleanup
-
 Merge of LIS + MTS datasets
 
 2. Feature Engineering
-
 Generated new atmospheric features:
-
 Heat Index (THI)
-
 Pressure Drop
-
 3-day rolling means
-
 Rainfall category
-
 Season encoding
-
 District one-hot encoding
-
 Calendar features (Month, DOY, Week)
 
 3. Data Balancing
-
 Used SMOTE–Tomek Links to handle extreme class imbalance
 (lightning days are very rare).
 
 4. Model Training
-
 Evaluated models:
-
 Logistic Regression
-
 Random Forest
-
 XGBoost
-
 Gradient Boosting
-
 Multi-Layer Perceptron (MLP)
-
 Final ensemble = LR + MLP + Gradient Boosting
 
 🖥 How the App Works
 
 The Streamlit UI allows the user to:
-
 Select a district
-
 Fetch live weather via OpenWeather API
-
 Or enter weather values manually
-
 Press “Predict Lightning Risk”
-
 See:
-
 Probability %
-
 Risk category
-
 Safety advice
-
 Full feature vector passed to model
 
 📌 Folder Structure
@@ -186,15 +144,10 @@ NEWS_API_KEY = "<your_newsapi_key>"   # optional
 📚 References
 
 LIS Satellite Lightning Data
-
 MTS District-level Weather Data
-
 SMOTE & Tomek Links (Imbalanced-learn)
-
 OpenWeatherMap API Documentation
-
 Scikit-learn ML Documentation
-
 Research on lightning detection & atmospheric patterns
 
 🙋‍♂️ Author
